@@ -501,7 +501,7 @@
     <Compile Include="SGen.cs">
       <ExcludeFromStyleCop>true</ExcludeFromStyleCop>
     </Compile>
-    <Compile Include="SignFile.cs" Condition="'$(MonoBuild)' != 'true'">
+    <Compile Include="SignFile.cs">
       <ExcludeFromStyleCop>true</ExcludeFromStyleCop>
     </Compile>
     <Compile Include="System.Design.cs" />

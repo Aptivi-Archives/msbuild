@@ -62,6 +62,7 @@ function DownloadMSBuildForMono {
     # rename just to make it obvious when reading logs!
     mv $artifacts_dir/msbuild $mono_msbuild_dir
     chmod +x $artifacts_dir/mono-msbuild/MSBuild.dll
+    sed -i 's#/sh$#/bash#' $artifacts_dir/mono-msbuild/msbuild
 
     if [[ `uname -s` != 'Darwin' ]]; then
         # with no .so available, this ends up breaking the build

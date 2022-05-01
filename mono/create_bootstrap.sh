@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # This creates a bootstrap from an exising mono installation
 # This is just to ensure that we have the correct "matched" Roslyn

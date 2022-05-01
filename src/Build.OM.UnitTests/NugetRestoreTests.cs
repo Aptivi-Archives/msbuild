@@ -23,7 +23,7 @@ namespace Microsoft.Build.Engine.OM.UnitTests
         // This NuGet version cannot locate other assemblies when parsing solutions at restore time. This includes localized strings required in debug mode.
         // NuGet version 4.1.0 was somewhat arbitrarily chosen. 3.5 breaks with an unrelated error, and 4.8.2 does not fail when a new dependency is introduced. This is a safe middle point.
 #if !DEBUG
-        [SkipOnTargetFramework(TargetFrameworkMonikers.Netcoreapp | TargetFrameworkMonikers.Mono)]
+        [SkipOnTargetFramework(TargetFrameworkMonikers.Netcoreapp)]
         [Fact]
         public void TestOldNuget()
         {
