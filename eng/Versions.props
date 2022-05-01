@@ -35,7 +35,7 @@
     <MicrosoftNETSdkVersion>3.1.400-preview.20365.20</MicrosoftNETSdkVersion>
     <MicrosoftNETSdkRazorVersion>3.1.6</MicrosoftNETSdkRazorVersion>
     <MicrosoftNETSdkWebVersion>3.1.300-servicing.20216.7</MicrosoftNETSdkWebVersion>
-    <ILLinkTasksVersion>0.1.6-prerelease.20175.2</ILLinkTasksVersion>
+    <ILLinkTasksVersion>0.1.6-prerelease.19380.1</ILLinkTasksVersion>
     <MicrosoftNETCoreAppVersion>3.1.6-servicing.20316.4</MicrosoftNETCoreAppVersion>
     <MicrosoftDotNetCliRuntimeVersion>6.0.100-rtm.21527.8</MicrosoftDotNetCliRuntimeVersion>
     <DotNetCliVersion>$([System.Text.RegularExpressions.Regex]::Match($([System.IO.File]::ReadAllText('$(MSBuildThisFileDirectory)..\global.json')), '"dotnet": "([^"]*)"').Groups.get_Item(1))</DotNetCliVersion>
