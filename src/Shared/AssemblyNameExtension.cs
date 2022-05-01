@@ -148,7 +148,6 @@ namespace Microsoft.Build.Shared
                 var hashAlgorithm = (System.Configuration.Assemblies.AssemblyHashAlgorithm) info.GetInt32("hashAlg");
                 var versionCompatibility = (AssemblyVersionCompatibility) info.GetInt32("verCompat");
                 var codeBase = info.GetString("codebase");
-                var keyPair = (StrongNameKeyPair) info.GetValue("keypair", typeof(StrongNameKeyPair));
 
                 asAssemblyName = new AssemblyName
                 {
@@ -160,7 +159,6 @@ namespace Microsoft.Build.Shared
                     HashAlgorithm = hashAlgorithm,
                     VersionCompatibility = versionCompatibility,
                     CodeBase = codeBase,
-                    KeyPair = keyPair
                 };
 
                 asAssemblyName.SetPublicKey(publicKey);
@@ -644,7 +642,7 @@ namespace Microsoft.Build.Shared
         /// </summary>
         internal AssemblyNameExtension Clone()
         {
-            AssemblyNameExtension newExtension = new AssemblyNameExtension();
+            AssemblyNameExtension newExtension = new();
 
             if (asAssemblyName != null)
             {
@@ -1010,7 +1008,6 @@ namespace Microsoft.Build.Shared
                 info.AddValue("hashAlg", asAssemblyName.HashAlgorithm);
                 info.AddValue("verCompat", asAssemblyName.VersionCompatibility);
                 info.AddValue("codebase", asAssemblyName.CodeBase);
-                info.AddValue("keypair", asAssemblyName.KeyPair);
             }
 
             info.AddValue("asStr", asString);
